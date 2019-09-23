@@ -1,0 +1,218 @@
+body {
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+/* Wrapper */
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* ile kolumn */
+    /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
+    grid-template-rows: auto auto auto auto auto;
+    /* ile wierszy */
+    grid-template-areas: "header header""main-info main-info""main-foto main-foto""sign-up sign-up""social about";
+    /* logo logo bo chce zeby dwie kolumny mi zajelo, zebym mial caly wiersz tylko dla logo */
+    /* tego "social about" nie trzeba bez tego bedzie taki sam efekt */
+    background-color: white;
+}
+
+
+/* Div Header */
+.header {
+    grid-area: header;
+    padding: 2% 5% 8%;
+}
+
+
+/* Div Main Info */
+
+.main-info {
+    grid-area: main-info;
+    text-align: center;
+    /* background-color: pink; */
+    padding-bottom: 5%;
+}
+
+.main-info p {
+    padding-left: 30%;
+    width: 40%;
+}
+
+
+/* Div Main Foto */
+.main-foto {
+    grid-area: main-foto;
+    /* background-color: yellow; */
+    padding-bottom: 5%;
+}
+
+.screen-mockup {
+    width: 50%;
+    /* wysrodkowanie obrazka */
+    display: block;
+    margin: auto;
+}
+
+
+/* Div Sign-up */
+.sign-up {
+    grid-area: sign-up;
+    text-align: center;
+    padding-bottom: 10%;
+}
+
+input {
+    background-color: #FFFFFF;
+    border: solid 1px #A9A9A9;
+    font-size: 14px;
+    color: #7E7E7E;
+    -moz-border-radius: 21px;
+    -webkit-border-radius: 21px;
+    border-radius: 10px;
+    padding: 13px 9px;
+    padding-right: 120px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+    margin-top: 5%;
+    margin-right: 8%;
+    outline: none;
+    /* likwiduje ten niebieski pasek jak sie klika */
+
+}
+
+
+.register {
+    background-color: hsl(322, 100%, 66%);
+    -moz-border-radius: 28px;
+    -webkit-border-radius: 28px;
+    border-radius: 10px;
+    border: 1px solid white;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-family: Arial;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 13px 69px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+    outline: none;
+    /* likwiduje ten niebieski pasek jak sie klika */
+
+
+}
+
+
+
+/* Div Social */
+
+.social {
+    grid-area: social;
+    /* powyzej nie jest to konieczne */
+    background-color: hsl(192, 100%, 9%);
+    color: white;
+    padding: 8% 5%;
+}
+
+.logoWhite {
+    filter: brightness(0) invert(1);
+    padding-bottom: 12%;
+    display: block;
+
+}
+
+.social i {
+    font-size: 30px;
+    margin: 18px 28px;
+}
+
+
+/* Div About  */
+.about {
+    grid-area: about;
+    background-color: hsl(192, 100%, 9%);
+    color: white;
+    padding: 8% 1%;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    padding-bottom: 12%;
+}
+
+ul li {
+    margin: 0 3%;
+}
+
+.about p {
+    padding-right: 10%;
+    text-align: right;
+}
+
+
+
+
+@media (max-width: 864px) {
+    .wrapper {
+        grid-template-rows: auto auto auto auto auto;
+        /* ile wierszy */
+        grid-template-areas: "header header""main-info main-info""main-foto main-foto""sign-up sign-up""social social""about about";
+    }
+
+    .screen-mockup {
+        width: 100%;
+    }
+
+
+
+
+    input {
+        display: flex;
+        margin: 5% 25%;
+    }
+
+
+    .register {
+        padding: 13px 120px;
+    }
+
+
+
+    .social i {
+        font-size: 30px;
+        margin: 0 10px;
+    }
+
+    .about {
+        padding: 0;
+    }
+
+    ul {
+        display: block;
+        list-style: none;
+        padding-bottom: 6%;
+    }
+
+    ul li {
+        margin: 5% 0;
+    }
+
+    .about p {
+        padding-left: 5%;
+        text-align: left;
+    }
+}
